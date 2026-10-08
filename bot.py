@@ -12,8 +12,7 @@ from aiogram.filters import Command
 logging.basicConfig(level=logging.INFO)
 
 # Получаем токен из переменных окружения
-TOKEN = os.getenv("8802150498:AAH8-jB4ATF6X9n5vq3n-ul6MOJvStWR-1Q
-")
+TOKEN = os.getenv("8802150498:AAH8-jB4ATF6X9n5vq3n-ul6MOJvStWR-1Q")
 if not TOKEN:
     raise ValueError("Токен BOT_TOKEN не найден в переменных окружения Railway!")
 
@@ -204,5 +203,5 @@ async def main():
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
-if name == "main":
+if __name__ == "__main__":
     asyncio.run(main())
